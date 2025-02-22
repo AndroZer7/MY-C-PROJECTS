@@ -9,12 +9,12 @@ double Addition(double, double);
 double Subtraction(double, double);
 double Multiplication(double, double);
 double Division(double, double);
-double Modulus(double, double);
+int Modulus(int, int);
 double Power(double, double);
 
 int main()
 {
-    printf("Welcome to Simple Calculator by Debatra\n\n");
+    printf("\n\nWelcome to Simple Calculator by Debatra\n\n");
 
     int input;
     double num1, num2, result;
@@ -29,10 +29,11 @@ int main()
             printf("Exiting the calculator. Thank you!\n");
             break;
         }
-
-        if (input < 1 || input > 6)
+        else if (input <= 0 || input > 7)
         {
-            printf("Invalid choice. Please enter a number between 1 and 7.\n\n");
+            fprintf(stderr, "Invalid menu choice!\n");
+            printf("Invalid menu choice!\n");
+            // break;
             continue;
         }
 
@@ -63,7 +64,7 @@ int main()
             break;
         default:
             printf("Invalid input. Please try again.\n");
-            continue;
+            break;
         }
 
         printf("The result is: %.2f\n\n", result);
@@ -112,26 +113,23 @@ double Division(double num1, double num2)
 {
     if (num2 == 0)
     {
-        printf("Error: Division by zero is not allowed.\n");
-        return NAN;
+        fprintf(stderr, "Division by zero is not allowed!");
     }
     return num1 / num2;
 }
 
 // Modulus (only works for integers)
-double Modulus(double num1, double num2)
+int Modulus(int num1, int num2)
 {
-    if ((int)num1 != num1 || (int)num2 != num2)
+    if (num2 == 0)
     {
-        printf("Error: Modulus operation is only valid for integers.\n");
-        return NAN;
+        fprintf(stderr, "Modulus by zero is not allowed!");
     }
-    if ((int)num2 == 0)
+    if (num2 == 0)
     {
-        printf("Error: Modulus by zero is not allowed.\n");
-        return NAN;
+        return (int)num1 % (int)num2;
     }
-    return (int)num1 % (int)num2;
+    return num1 % num2;
 }
 
 // Power
