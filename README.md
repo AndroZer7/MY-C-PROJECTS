@@ -27,7 +27,7 @@ These repository contains a collectionof C programmes covering different concept
 To get started with these C programs, clone the repository to your local machine:
 
 ```sh
-git clone https://github.com/yourusername/production-ready-c-programs.git
+git clone https://github.com/AndroZer7/MY-C-PROJECTS.git
 cd production-ready-c-programs
 ```
 
