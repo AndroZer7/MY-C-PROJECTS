@@ -28,7 +28,6 @@ To get started with these C programs, clone the repository to your local machine
 
 ```sh
 git clone https://github.com/AndroZer7/MY-C-PROJECTS.git
-cd production-ready-c-programs
 ```
 
 ## Usage
