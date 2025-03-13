@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 // Ascending Bubble sort function
-int Ascending_Bubble_Sort(int arr[], int n);
+void Ascending_Bubble_Sort(int arr[], int n);
 // Descending Bubble sort function
-int Descending_Bubble_Sort(int arr[], int n);
+void Descending_Bubble_Sort(int arr[], int n);
 
 int main()
 {
@@ -45,7 +45,7 @@ int main()
 }
 
 // Ascending Bubble sort function
-int Ascending_Bubble_Sort(int arr[], int n)
+void Ascending_Bubble_Sort(int arr[], int n)
 {
     int i, j, temp;
     for (i = 0; i < n - 1; i++)
@@ -62,7 +62,7 @@ int Ascending_Bubble_Sort(int arr[], int n)
     }
 }
 // Descending Bubble sort function
-int Descending_Bubble_Sort(int arr[], int n)
+void Descending_Bubble_Sort(int arr[], int n)
 {
     int i, j, temp;
     for (i = 0; i < n - 1; i++)
